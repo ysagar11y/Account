@@ -10,7 +10,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class AccountDTO {
-    private long accountNumber;
+    private Long accountNumber;
     private String AccountType;
     private String branchAddress;
 }

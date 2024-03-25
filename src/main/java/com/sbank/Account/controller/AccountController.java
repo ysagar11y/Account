@@ -34,4 +34,21 @@ public class AccountController {
         CustomerDTO customerDTO = accountService.fetchAccount(mobileNumber);
         return ResponseEntity.status(HttpStatus.OK).body(customerDTO);
     }
+
+    @PutMapping("/update")
+    public ResponseEntity<ResponseDTO> updateAccount(@RequestBody CustomerDTO customerDTO){
+        if(accountService.updateAccount(customerDTO)){
+            return ResponseEntity
+                    .status(HttpStatus.OK)
+                    .body(new ResponseDTO(AccountsConstant.STATUS_200,AccountsConstant.MESSAGE_200));
+        }
+        else
+            return ResponseEntity
+                    .status(HttpStatus.EXPECTATION_FAILED)
+                    .body(new ResponseDTO(AccountsConstant.STATUS_417,AccountsConstant.MESSAGE_417_UPDATE));
+    }
+
+
+
+
 }

@@ -8,7 +8,7 @@ import com.sbank.Account.entity.Account;
 
 public class AccountMapper {
 
-    public static Account mapToCustomer(Account account,AccountDTO accountDTO) {
+    public static Account mapToAccount(Account account,AccountDTO accountDTO) {
         account.setAccountNumber(accountDTO.getAccountNumber());
         account.setAccountType(accountDTO.getAccountType());
         account.setBranchAddress(accountDTO.getBranchAddress());
