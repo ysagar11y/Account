@@ -1,13 +1,15 @@
 package com.sbank.Account.service;
 
-import com.sbank.Account.dto.CustomerDTO;
+import com.sbank.Account.dto.CustomerDto;
 import org.springframework.stereotype.Service;
 
 @Service
 public interface IAccountService {
-    public void createAccount(CustomerDTO customerDTO);
+    public void createAccount(CustomerDto customerDTO);
 
-    public CustomerDTO fetchAccount(String mobileNumber);
+    public CustomerDto fetchAccount(String mobileNumber);
 
-    public Boolean updateAccount(CustomerDTO customerDTO);
+    public Boolean updateAccount(CustomerDto customerDTO);
+
+    public Boolean deleteAccount(String mobileNumber);
 }

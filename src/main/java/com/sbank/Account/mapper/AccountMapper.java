@@ -2,24 +2,24 @@ package com.sbank.Account.mapper;
 
 
 
-import com.sbank.Account.dto.AccountDTO;
-import com.sbank.Account.entity.Account;
+import com.sbank.Account.dto.AccountsDto;
+import com.sbank.Account.entity.Accounts;
 
 
 public class AccountMapper {
 
-    public static Account mapToAccount(Account account,AccountDTO accountDTO) {
-        account.setAccountNumber(accountDTO.getAccountNumber());
-        account.setAccountType(accountDTO.getAccountType());
-        account.setBranchAddress(accountDTO.getBranchAddress());
-        return account;
+    public static AccountsDto mapToAccountsDto(Accounts accounts, AccountsDto accountsDto) {
+        accountsDto.setAccountNumber(accounts.getAccountNumber());
+        accountsDto.setAccountType(accounts.getAccountType());
+        accountsDto.setBranchAddress(accounts.getBranchAddress());
+        return accountsDto;
     }
 
-    public static AccountDTO mapToAccountDTO(Account account, AccountDTO accountDTO){
-        accountDTO.setAccountNumber(account.getAccountNumber());
-        accountDTO.setAccountType(account.getAccountType());
-        accountDTO.setBranchAddress(account.getBranchAddress());
-        return accountDTO;
+    public static Accounts mapToAccounts(AccountsDto accountsDto, Accounts accounts) {
+        accounts.setAccountNumber(accountsDto.getAccountNumber());
+        accounts.setAccountType(accountsDto.getAccountType());
+        accounts.setBranchAddress(accountsDto.getBranchAddress());
+        return accounts;
     }
 
 }

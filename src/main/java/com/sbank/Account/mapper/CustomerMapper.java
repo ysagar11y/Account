@@ -1,21 +1,21 @@
 package com.sbank.Account.mapper;
 
-import com.sbank.Account.dto.CustomerDTO;
+import com.sbank.Account.dto.CustomerDto;
 import com.sbank.Account.entity.Customer;
 
 public class CustomerMapper {
 
-    public static Customer mapToCustomer(CustomerDTO customerDTO, Customer customer){
-        customer.setName(customerDTO.getName());
-        customer.setEmail(customerDTO.getEmail());
-        customer.setMobileNumber(customerDTO.getMobileNumber());
-        return customer;
+    public static CustomerDto mapToCustomerDto(Customer customer, CustomerDto customerDto) {
+        customerDto.setName(customer.getName());
+        customerDto.setEmail(customer.getEmail());
+        customerDto.setMobileNumber(customer.getMobileNumber());
+        return customerDto;
     }
 
-    public static CustomerDTO mapToCustomerDTO(Customer customer, CustomerDTO customerDTO){
-        customerDTO.setName(customer.getName());
-        customerDTO.setEmail(customer.getEmail());
-        customerDTO.setMobileNumber(customerDTO.getMobileNumber());
-        return customerDTO;
+    public static Customer mapToCustomer(CustomerDto customerDto, Customer customer) {
+        customer.setName(customerDto.getName());
+        customer.setEmail(customerDto.getEmail());
+        customer.setMobileNumber(customerDto.getMobileNumber());
+        return customer;
     }
 }
